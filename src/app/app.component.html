@@ -1,0 +1,35 @@
+<div>{{ log }}</div>
+<div class="container">
+  <div class="switcher">
+    <div class="left">
+      <div class="title">Title</div>
+      <div class="body">
+        <div
+          class="elt"
+          *ngFor="let elt of listLeft; index as i"
+          [ngClass]="{ 'elt-selected': elt.selected }"
+          (click)="toggleSelection(elt, i, 'left')"
+        >
+          {{ elt.value }}
+        </div>
+      </div>
+    </div>
+    <div class="separator">
+      <div class="put-left" (click)="putLeft()">←</div>
+      <div class="put-right" (click)="putRight()">→</div>
+    </div>
+    <div class="right">
+      <div class="title">Title</div>
+      <div class="body">
+        <div
+          class="elt"
+          *ngFor="let elt of listRight; index as i"
+          [ngClass]="{ 'elt-selected': elt.selected }"
+          (click)="toggleSelection(elt, i, 'right')"
+        >
+          {{ elt.value }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
