@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="wrapper">
+
+    <div class="side">
+      <div class="element" *ngFor="let element of leftElements">{{element.label}}</div>
+    </div>
+    <div class="separator">
+      <button (click)="moveRight()"> > </button>
+      <button (click)="moveLeft()"> < </button>
+    </div>
+    <div class="side">
+      <div class="element" *ngFor="let element of rightElements">{{element.label}}</div>
+    </div>
+
+  </div>
+</div>
